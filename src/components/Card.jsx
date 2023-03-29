@@ -22,6 +22,8 @@ const Card = ({ tempInfo }) => {
             break
             case 'Clear' : setWeatherMood('wi-day-sunny')
             break
+            case 'Mist' : setWeatherMood('wi-dust')
+            break
             default : setWeatherMood('wi-day-sunny')
             break
         }
@@ -45,7 +47,7 @@ const Card = ({ tempInfo }) => {
           </div>
           <div className="description">
             <div className="weatherCondition">{weathermood}</div>
-            <div className="place">{name}</div>
+            <div className="place">{name}, {country}</div>
           </div>
         </div>
         <div className="date">{new Date().toLocaleString()}</div>
